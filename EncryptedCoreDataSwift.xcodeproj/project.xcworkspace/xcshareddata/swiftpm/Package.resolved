@@ -1,0 +1,24 @@
+{
+  "originHash" : "3384d9806878b7985b424914a8607b84e85ca3452e4512eed375c04e5332fd16",
+  "pins" : [
+    {
+      "identity" : "sqlcipher.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sqlcipher/SQLCipher.swift",
+      "state" : {
+        "revision" : "e7415c5e6b4fd9b78874bb956aad8a42b08e9966",
+        "version" : "4.20.0"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift",
+      "state" : {
+        "revision" : "4114679379eeb4538638f49ec14e1854dd9cf73c",
+        "version" : "0.17.0"
+      }
+    }
+  ],
+  "version" : 3
+}

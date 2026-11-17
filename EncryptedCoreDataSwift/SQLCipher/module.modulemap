@@ -1,0 +1,20 @@
+// Exposes the SQLCipher Community Edition headers to Swift as `import SQLCipher`.
+//
+// Point `header` at the sqlite3.h shipped with your SQLCipher Community build.
+// The key requirement is that the LINKER resolves sqlite3_key / sqlite3_rekey
+// against SQLCipher, NOT Apple's system libsqlite3.
+//
+// In Xcode:
+//   1. Add this folder to "Import Paths"  (Swift Compiler - Search Paths →
+//      SWIFT_INCLUDE_PATHS = $(SRCROOT)/SQLCipher).
+//   2. Link the SQLCipher static lib / framework and add -DSQLITE_HAS_CODEC.
+//   3. Make sure libsqlite3.tbd is NOT linked (it would shadow the symbols).
+//
+// When using CocoaPods or SPM 'SQLCipher' (community), the pod/package already
+// links its own binary — add `link "sqlite3"` inside the module block if needed.
+
+module SQLCipher [system] {
+    // Adjust this path to your SQLCipher Community Edition headers.
+    header "shim.h"
+    export *
+}
